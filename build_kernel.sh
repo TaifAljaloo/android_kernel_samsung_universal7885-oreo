@@ -51,7 +51,7 @@ PACK_JACPOTLTE_IMG()
 	cp -rf $SW_DIR/sw-tools/Unified/ramdisk $SW_DIR/sw-tools/AIK-Linux
 	cp -rf $SW_DIR/sw-tools/Unified/split_img $SW_DIR/sw-tools/AIK-Linux
 	mv $SW_DIR/arch/arm64/boot/Image $SW_DIR/sw-tools/AIK-Linux/split_img/boot.img-zImage
-	mv $(pwd)/dtb.img $SW_DIR/sw-tools/AIK-Linux/split_img/boot.img-dtb
+	mv $(pwd)/arch/arm64/boot/dtb.img $SW_DIR/sw-tools/AIK-Linux/split_img/boot.img-dtb
 	$SW_DIR/sw-tools/AIK-Linux/repackimg.sh --nosudo
 	mv $SW_DIR/sw-tools/AIK-Linux/image-new.img $SW_DIR/sw-tools/out/boot-$SW_VARIANT.img
 	$SW_DIR/sw-tools/AIK-Linux/cleanup.sh --nosudo
@@ -64,7 +64,7 @@ PACK_JACKPOT2LTE_IMG()
 	cp -rf $SW_DIR/sw-tools/Unified/ramdisk $SW_DIR/sw-tools/AIK-Linux
 	cp -rf $SW_DIR/sw-tools/Unified/split_img $SW_DIR/sw-tools/AIK-Linux
 	mv $SW_DIR/arch/arm64/boot/Image $SW_DIR/sw-tools/AIK-Linux/split_img/boot.img-zImage
-	mv $(pwd)/dtb.img $SW_DIR/sw-tools/AIK-Linux/split_img/boot.img-dtb
+	mv $(pwd)/arch/arm64/boot/dtb.img $SW_DIR/sw-tools/AIK-Linux/split_img/boot.img-dtb
 	$SW_DIR/sw-tools/AIK-Linux/repackimg.sh --nosudo
 	mv $SW_DIR/sw-tools/AIK-Linux/image-new.img $SW_DIR/sw-tools/out/boot-$SW_VARIANT.img
 	$SW_DIR/sw-tools/AIK-Linux/cleanup.sh --nosudo
