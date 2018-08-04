@@ -23,7 +23,7 @@ SW_TOOLCHAIN=/home/taif/kernel/toolchain/aarch64-linux-android-4.9-kernel/bin/aa
 SW_JOBS=4
 SW_DIR=$(pwd)
 export ARCH=arm64
-export ANDROID_MAJOR_VERSION=o
+export ANDROID_MAJOR_VERSION=8.0.0
 export CROSS_COMPILE=$SW_TOOLCHAIN
 # Init Methods
 CLEAN_SOURCE()
