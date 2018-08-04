@@ -43,20 +43,6 @@ BUILD_ZIMAGE()
 	make -j$SW_JOBS
 	echo " "
 }
-BUILD_DTB()
-{
-	echo "----------------------------------------------"
-	echo "Building dtb for $SW_VARIANT..."
-	echo " "
-	for dts in $SW_DTB; do
-		${CROSS_COMPILE}cpp -nostdinc -undef -x assembler-with-cpp -I $SW_DIR/include $SW_DIR/arch/arm64/boot/dts/exynos/${dts}.dts > ${dts}.dts
-		$SW_DIR/scripts/dtc/dtc -p 0 -i $SW_DIR/arch/arm64/boot/dts/exynos -O dtb -o ${dts}.dtb ${dts}.dts
-	done
-	$SW_DIR/tools/dtbtool/dtbtool -o $SW_DIR/dtb.img
-	rm -f $SW_DIR/*.dtb
-	rm -f $SW_DIR/*.dts
-	echo " "
-}
 PACK_JACPOTLTE_IMG()
 {
 	echo "----------------------------------------------"
