@@ -91,9 +91,7 @@ do
             echo "Starting JACKPOTLTE kernel build..."
             SW_VARIANT=A530F
             SW_DEFCON=exynos7885-jackpotlte_defconfig
-            SW_DTB="exynos7885-jackpotlte_eur_open_00 exynos7885-jackpotlte_eur_open_01 exynos7885-jackpotlte_eur_open_02 exynos7885-jackpotlte_eur_open_03 exynos7885-jackpotlte_eur_open_04 exynos7885-jackpotlte_eur_open_05 exynos7885-jackpotlte_eur_open_06 exynos7885-jackpotlte_eur_open_07"
             BUILD_ZIMAGE
-            BUILD_DTB
             PACK_JACPOTLTE_IMG
             echo " "
             echo "----------------------------------------------"
@@ -114,10 +112,8 @@ do
             echo "----------------------------------------------"
             echo "Starting JACKPOT2LTE kernel build..."
             SW_VARIANT=A730F
-            SW_DEFCON=exynos7885-jackpot2lte_eur_defconfig
-            SW_DTB="exynos7885-jackpot2lte_eur_open_00 exynos7885-jackpot2lte_eur_open_01 exynos7885-jackpot2lte_eur_open_02 exynos7885-jackpot2lte_eur_open_03 exynos7885-jackpot2lte_eur_open_04 exynos7885-jackpot2lte_eur_open_05 exynos7885-jackpot2lte_eur_open_06 exynos7885-jackpot2lte_eur_open_07"
+            SW_DEFCON=exynos7885-jackpot2lte_defconfig
             BUILD_ZIMAGE
-            BUILD_DTB
             PACK_JACKPOT2LTE_IMG
             echo " "
             echo "----------------------------------------------"
