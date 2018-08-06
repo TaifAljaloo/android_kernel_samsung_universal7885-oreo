@@ -29,7 +29,7 @@ export CROSS_COMPILE=$SW_TOOLCHAIN
 # Init Methods
 CLEAN_SOURCE()
 {
-	make clean
+    make clean
 	make mrproper
 	rm -r -f $SW_DIR/swift/dtb.img
 }
